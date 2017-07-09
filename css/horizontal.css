@@ -38,3 +38,25 @@ header label {
 header label:hover {
     background: #2e353b;
 }
+
+.slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Push all unchecked slides to the end of the window */
+    z-index: 10;
+    padding: 8em 1em 0;
+    background-color: #120103;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.slide-1 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/starryFarm.jpg'); }
+
+.slide-2 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/campusDarkDays.jpg'); }
+
+.slide-3 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/autumn.jpg'); }
+
+.slide-4 {
+         background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/lakehouse.jpg'); }
