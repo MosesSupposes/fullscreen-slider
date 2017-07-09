@@ -50,6 +50,7 @@ header label:hover {
     background-color: #120103;
     background-position: 50% 50%;
     background-size: cover;
+    transition: left 0s .75s;
 }
 
 .slide-1 { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/starryFarm.jpg'); }
@@ -60,3 +61,22 @@ header label:hover {
 
 .slide-4 {
          background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/lakehouse.jpg'); }
+
+/* This selector will target any element whose ID starts with the word 'slide' (in this case, all of our radio inputs) and has the checked state. Then, by using the adjacent sibling combinator, we can target our slide*/
+[id^="slide"]:checked + .slide { 
+    left: 0; /* Put the slide back in view (remember, the default position of our slides are ablsolute and offscreen. See lines 45-47 )*/
+    z-index: 100;
+    transition: left .65s ease-out;
+}
+
+.slide h1 {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform .5s .5s, opacity .5s;
+}
+
+[id^="slide"]:checked + .slide h1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .5s .5s;
+}
